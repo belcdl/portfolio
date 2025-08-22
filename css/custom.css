@@ -1,0 +1,27 @@
+/*!
+  * Item: Kitzu
+  * Description: Personal Portfolio Template
+  * Author/Developer: Exill
+  * Author/Developer URL: https://themeforest.net/user/exill
+  * Version: v2.0.1
+  * License: Themeforest Standard Licenses: https://themeforest.net/licenses
+  */
+
+/*----------- ADD YOUR CUSTOM CSS STYLES BELOW -----------*/
+.lightbox-wrapper 
+  .simplebar-wrapper {
+    background-color: rgb(255, 255, 255);
+    color: black;
+  }
+  .lightbox-wrapper 
+  .simplebar-wrapper {
+    background-color: rgb(255, 255, 255);
+    color: black;
+  }
+  
+.lightbox-wrapper .lightbox-close .close-btn .btn-line, 
+.lightbox-wrapper .lightbox-close .close-btn:before, 
+.lightbox-wrapper .lightbox-close .close-btn:after {
+  background-color: black;
+  height: 2px;
+}
