@@ -1,0 +1,23 @@
+# Robots.txt
+
+User-agent: *
+Disallow: /css/
+Disallow: /js/
+Disallow: /php/
+Disallow: /pdf/
+Disallow: /import_os.json
+Disallow: /import_sys.json
+Disallow: /import_socket.json
+Disallow: /import_time.json
+Disallow: /re.txt
+
+Allow: /img/ai/
+Allow: /img/favicons/
+Allow: /img/photos/
+Allow: /img/viz/
+
+Allow: /index.html
+Allow: /video.html
+
+# Sitemap 
+# Sitemap: https://belcdl.github.io/sitemap.xml
