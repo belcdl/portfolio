@@ -780,6 +780,13 @@ hr {
     width: 90px;
   }
 
+  @media (max-width: 767.98px) {
+  .navbar {
+    background-color: black;
+    padding: 26px 20px;
+}
+  }
+
   .navbar .navbar-menu {
     -ms-flex-direction: column;
     -ms-flex-pack: justify;
