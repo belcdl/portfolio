@@ -1902,7 +1902,8 @@ hr {
 .lity-content .compare{
   --pos: 50%;                    /* % visible a la IZQUIERDA (DESPUÉS) */
   position: relative;
-  width: min(900px, 90vw);
+  width: min(1000px, 95vw);
+  height: min(500px, 95vw);
   margin: 0 auto;
   cursor: ew-resize;
   user-select: none;

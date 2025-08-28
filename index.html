@@ -52,7 +52,7 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
         <!--<li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li> -->
-        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a id="nav-portfolio" class="nav-link" href="#portfolio">Portfolio</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
       </ul>
     </div>
@@ -64,7 +64,9 @@
         <div class="col-12 col-lg-8 home-content text-center">
           <h1 class="home-name">Bel</span></h1>
           <h4 class="cd-headline clip home-headline">I’m a <span class="cd-words-wrapper single-headline"><b class="is-visible">Developer</b><b>Designer</b><b>Human</b></span></h4>
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Visita mi portfolio</a></li>
+          <a id="cta-portfolio" class="nav-link" href="#portfolio">
+              Visita mi portfolio
+            </a>
         </div>
       </div>
     </div>
@@ -370,11 +372,13 @@
                   <span class="compare__label compare__label--right">Después</span>
                 </div>
               </div>
+
+
              <!-- Single item AI-->
               <div class="single-item col-6 col-lg-4 design">
                 <a id="ai" class="portfolio-item design" href="#compare-ai4" data-lity>
                   <div class="portfolio-wrapper">
-                    <img class="img-fluid" alt="Item" src="img/ai/IMG04_after.png" loading="lazy">
+                    <img class="img-fluid" alt="Item" src="img/ai/IMG01_after.png" loading="lazy">
                     <div class="item-content">
                       <h6 class="content-title">Imagen mejorada con IA</h6>
                       <span class="content-more">Ver</span>
@@ -383,12 +387,12 @@
                 </a>
               </div>      
                   <!-- Contenido oculto que Lity mostrará en el modal -->
-             <div id="compare-ai2" class="lity-hide">
+             <div id="compare-ai4" class="lity-hide">
                 <div class="compare" aria-label="Comparador antes/después">
                   <!-- Base = ANTES (derecha) -->
-                  <img class="compare__overlay"    src="img/ai/IMG04.jpeg" alt="Antes" loading="lazy">
+                  <img class="compare__overlay"    src="img/ai/IMG01.jpeg" alt="Antes" loading="lazy">
                   <!-- Overlay = DESPUÉS (izquierda) -->
-                  <img class="compare__base" src="img/ai/IMG04_after.png" alt="Después">
+                  <img class="compare__base" src="img/ai/IMG01_after.png" alt="Después">
 
                   <!-- Divisor con círculo -->
                   <div class="compare__handle" aria-hidden="true"></div>
@@ -398,6 +402,8 @@
                   <span class="compare__label compare__label--right">Después</span>
                 </div>
               </div>
+
+
                <!-- Single item AI-->
               <div class="single-item col-6 col-lg-4 design">
                 <a id="ai" class="portfolio-item design" href="#compare-ai2" data-lity>
@@ -530,6 +536,19 @@
     </div>
   </div>
   <!-- Scripts-->
+   <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var cta = document.getElementById('cta-portfolio');
+    var navPortfolio = document.getElementById('nav-portfolio') 
+                    || document.querySelector('a.nav-link[href="#portfolio"]');
+    if (cta && navPortfolio) {
+      cta.addEventListener('click', function (e) {
+        e.preventDefault();          // evita el salto directo al ancla
+        navPortfolio.click();        // dispara la misma lógica del nav
+      });
+    }
+  });
+</script>
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/imagesloaded.pkgd.min.js"></script>
