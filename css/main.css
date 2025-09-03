@@ -41,6 +41,12 @@ body {
   position: relative;
 }
 
+.home-content #cta-portfolio {
+    font-size: 18px;
+    font-weight: normal;
+    text-shadow: 1px 1px 2px black;
+}
+
 /* Typography */
 i.icon {
   line-height: 100%;
@@ -1902,20 +1908,27 @@ hr {
 .lity-content .compare{
   --pos: 50%;                    /* % visible a la IZQUIERDA (DESPUÉS) */
   position: relative;
-  width: min(1000px, 95vw);
-  height: min(500px, 95vw);
+  /* width: min(1000px, 95vw); */
+  /* height: min(500px, 95vw); */
   margin: 0 auto;
   cursor: ew-resize;
   user-select: none;
   touch-action: none;            /* imprescindible en móvil */
   overflow: hidden;
+
 }
+.lity-content .compare::after {
+  width: auto;
+  height: auto;
+}
+
 
 /* Imágenes superpuestas */
 .compare__base{
   display:block;
   width:100%;
   height:auto;
+  max-height: 800px;
   position:relative;             /* define la altura del contenedor */
   z-index:1;
   pointer-events:none;
@@ -1926,12 +1939,14 @@ hr {
   top:0; left:0;
   width:100%;
   height:auto;
+  max-height: 800px;
   z-index:2;
   pointer-events:none;
   -webkit-user-drag: none;
   /* Mostrar SOLO la parte izquierda (DESPUÉS) según --pos */
   clip-path: inset(0 calc(100% - var(--pos)) 0 0);
 }
+
 
 /* Línea y círculo */
 .compare__handle{
