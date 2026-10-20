@@ -25,3 +25,40 @@
   background-color: black;
   height: 2px;
 }
+
+/*----------- Ajustes de diseño (oct 2026) -----------*/
+
+/* 1. "Sobre mí": titular más ligero */
+.info-section .info-content .content-title {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -0.2px;
+}
+
+/* 2. Foto sin marco */
+.info-section .info-img img.img-thumbnail {
+  border: 0;
+  padding: 0;
+  background: none;
+}
+
+/* 3. Portfolio: hover más sutil con ligero zoom */
+.portfolio-section .portfolio-grid .portfolio-wrapper:before {
+  background-color: rgba(0, 0, 0, 0.55);
+  transition: opacity 0.3s ease;
+}
+.portfolio-section .portfolio-grid .portfolio-wrapper>.img-fluid {
+  transition: transform 0.6s ease;
+}
+.portfolio-section .portfolio-grid .portfolio-wrapper:hover>.img-fluid {
+  transform: scale(1.04);
+}
+
+
+/* 4. Móvil: encuadre de portada mostrando parte de la foto */
+@media (max-width: 575.98px) {
+  .home-area {
+    background-position: 75% center;
+  }
+}
