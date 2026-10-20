@@ -446,11 +446,15 @@
     });
 
   });
-  $(window).on('load', function() {
-    /*----------- Preloader -----------*/
-
-    $('.preloader-icon').fadeOut(400);
-    $('.preloader').delay(500).fadeOut('slow');
-
-  });
+  /*----------- Preloader -----------*/
+  // Se oculta al cargar la página o, como máximo, a los 2 s
+  var preloaderHidden = false;
+  function hidePreloader() {
+    if (preloaderHidden) return;
+    preloaderHidden = true;
+    $('.preloader-icon').fadeOut(300);
+    $('.preloader').delay(300).fadeOut('slow');
+  }
+  $(window).on('load', hidePreloader);
+  setTimeout(hidePreloader, 2000);
 }(jQuery));
